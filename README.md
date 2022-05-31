@@ -1,27 +1,22 @@
-# Intro to CS Tutorial Mock Exam
-Dear students, this is the Mock Exam for your Intro to CS Tutorial. The actual Final exam will have the identical structure and the problems will be of similar level of difficulty.
+# Intro to CS Tutorial Final Exam
 <br><br>
-The file that you need to work with is `rotate.py`. <b>DO NOT EDIT ANY OTHER FILE</b>. In every single task, except for Task 1, you will have to use a function you have written beforehand.
+The file that you need to work with is `sum.py`. <b>DO NOT EDIT ANY OTHER FILE</b>. In every single task, except for Task 1, you will have to use a function you have written beforehand.
 Note that **if you do not use a previous function** to solve the next task, points will be deducted up to my consideration. 
 
 Additionally, **you are responsible** for the testing code to work properly. Reminder that to test your code, you need to go inside the **mock-exam** directory in terminal, and run <br>
 ```python3 -m pytest -xv```
 <br> To navigate to that directory, you need to use the `cd` command in the terminal. For the terminal commands, I have provided a short tutorial with your exam.
 
-## Cyclic Rotations
+## Split the Array
 
-Given an array, we would like to cyclically rotate it a given number of times. Cyclic rotation is when every single element of the array is moved in the same direction by the same number of indices,
- and the elements at the end get moved to the beginning, like a cycle.
-<br><br>
-So, for example, given an array `[1, 2, 3, 555, 234, 44]`, cyclically rotating it right by 1 would result in `[44, 1, 2, 3, 555, 234]`. If we cyclically rotate this new array right by 4,
- we get `[2, 3 ,555 ,234 , 44, 1]`.
+Given an `array`, we would like to split it into two parts, `array1` and `array2` such that `array = array1 + array2`, so that the sum of elements of `array1` is equal to the sum of elements of `array2`
 <br><br>
 **Any sort of HARDCODING of test cases will be penalized with 0 on the exam**
 You have to implement three functions:
 <ol>
-    <li>rotate_right_by_1 which takes an array and returns what it would look like if it were rotated right once </li>
-    <li>rotate_right_by_k which takes an array, a non-negative integer k, and returns what it would look like if it were rotated right k times </li>
-    <li>rotate_by_k which takes an array, an integer k(maybe positive, negative, or zero) and returns what the array would look like if it was rotate |k| times right if k positive and left if k is negative</li>
+    <li>prefix_sum which takes an array and returns a new array of prefix sums </li>
+    <li>segment_sum which takes an array, a non-negative integer left, and a non-negative integer right, and returns the sum of the segment of the array starting at index left and ending(including) the index right </li>
+    <li>split_the_array which takes an array, and returns two arrays array1 and array2 which is the correct splitting of the array.</li>
 </ol>
 
 
@@ -30,4 +25,4 @@ You have to implement three functions:
 
 To test your entire code, please run ```python3 -m pytest -xv```, and if you want to test your functions separately, use
 ```python3 -m pytest -xvk ``` followed by the name of the function. For example, to test the first function separately,
-run ```python3 -m pytest -xvk rotate_right_by_1```
+run ```python3 -m pytest -xvk prefix_sum```
