@@ -1,0 +1,50 @@
+[
+  {
+    "array" : [
+      13
+    ],
+    "left" : 0,
+    "right" : 0,
+    "expected" : 13,
+    "purpose" : "Purpose: Check the sum of 1 element"
+  },
+  {
+    "array" : [
+      13, 2, -5, -44, 15, 9
+    ],
+    "left" : 0,
+    "right" : 5,
+    "expected" : -10,
+    "purpose" : "Purpose: Check the sum of the entire array"
+  },
+  {
+    "array" : [
+      13, 14, 2, 3, 444, 5, 16, 13, 14, 2, 3, 444, 5, 16, 13
+    ],
+    "left" : 1,
+    "right" : 7,
+    "expected" : 497,
+    "purpose" : "Purpose:"
+  },
+  {
+    "array" : [
+      13, 14, 2, 3, 444, 5, 16, 13, 14, 2, 3, 444, 5, 16, 13
+    ],
+    "left" : 10,
+    "right" : 14,
+    "expected" : 481,
+    "purpose" : "Purpose: "
+  },
+  {
+    "array" : [
+      13, 14, 2, 3, 444, 5, 16, 13, 14, 2, 3, 444, 5, 16, 13
+    ],
+    "expected" : [
+      0, 13, 27, 29, 32, 476, 481, 497, 510, 524, 526, 529, 973, 978, 994, 1007
+    ],
+    "left" : 4,
+    "right" : 8,
+    "expected" : 492,
+    "purpose" : "Purpose: "
+  }
+]
